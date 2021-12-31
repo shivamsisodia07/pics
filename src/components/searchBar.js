@@ -1,4 +1,5 @@
-import React, { Component, Suspense } from "react";
+import React, { Component } from "react";
+
 class searchBar extends React.Component {
   state = {
     term: "",
@@ -6,7 +7,7 @@ class searchBar extends React.Component {
 
   onSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state.term);
+    this.props.onSubmit(this.state.term);
   };
   render() {
     return (
