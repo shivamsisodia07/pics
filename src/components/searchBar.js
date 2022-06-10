@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./searchBar.css";
 
 class searchBar extends React.Component {
   state = {
@@ -11,7 +12,7 @@ class searchBar extends React.Component {
   };
   render() {
     return (
-      <div className='ui segment'>
+      <div className='search_section'>
         <form className='ui form' onSubmit={this.onSubmit}>
           <div
             className='ui feild'
@@ -19,20 +20,19 @@ class searchBar extends React.Component {
               justifyItems: "center",
               alignItems: "center",
             }}>
-            <label> Image Search</label>{" "}
-            <input
-              type='text'
-              placeholder='Enter something'
-              value={this.state.term}
-              onChange={(e) => this.setState({ term: e.target.value })}
-            />
-            <button
-              type='submit'
-              style={{
-                marginTop: "10px",
-              }}>
-              submit
-            </button>
+            {/* logo */}
+            <div className='ui fluid icon input'>
+              <input
+                type='text'
+                placeholder='Search...'
+                value={this.state.term}
+                onChange={(e) => this.setState({ term: e.target.value })}
+              />
+              <button class='glow-on-hover' type='submit'>
+                Search
+              </button>
+              {/* <button type='submit'>Search</button> */}
+            </div>
           </div>
         </form>
       </div>

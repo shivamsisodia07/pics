@@ -2,7 +2,8 @@ import React from "react";
 import unsplash from "../api/unsplash";
 import SearchBar from "./searchBar";
 import ImageList from "./imageList";
-
+import Logo from "./logo";
+import "./app.css";
 class App extends React.Component {
   state = {
     images: [],
@@ -17,13 +18,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div
-        className='ui segment'
-        style={{
-          marginTop: "10px",
-        }}>
+      <div className='container'>
+        <Logo></Logo>
         <SearchBar onSubmit={this.onSearchSubmit}></SearchBar>
-        found: {this.state.images.length} imgaes
+        <h4>found: {this.state.images.length} images</h4>
         <ImageList images={this.state.images} />
       </div>
     );

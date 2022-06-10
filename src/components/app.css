@@ -1,0 +1,20 @@
+.container {
+  align-content: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+body {
+  background-color: #80808069;
+}
+.container h4 {
+  margin-left: 60px;
+}
+
+.logo_section {
+  align-content: center;
+  justify-content: center;
+}
+.logo {
+  width: 10%;
+  height: 20vh;
+}
